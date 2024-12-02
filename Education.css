@@ -1,0 +1,559 @@
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    align-items: center;
+    gap: 1em;
+    justify-items: center;
+}
+
+header {
+    width: 100%;
+    height: 700px;
+    font-family: 'Dongle', sans-serif;
+    background-image: url(images/Sekolah\ Header.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+header p {
+    position: absolute;
+    top: 600px;
+    right: 50px;
+    font-size: 2em;
+    font-family: 'Dongle', sans-serif;
+    color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+position: relative;
+z-index: 99;
+width: 100%;
+background-size: cover,contain; 
+background-repeat: no-repeat,no-repeat;
+background-position: top;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+}
+nav .wrapper{
+max-width: 1300px;
+padding: 0px 30px;
+height: 90px;
+line-height: 70px;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.wrapper .logo img{
+height: 60px;
+width: auto;
+padding-left: 8%;
+}
+.wrapper .nav-links{
+display: inline-flex;
+padding-top: 40px;
+padding-right: 8%;
+}
+.nav-links li{
+list-style: none;
+}
+.nav-links li a{
+color: #f2f2f2;
+text-decoration: none;
+font-size: 28px;
+font-weight: 400;
+padding: 9px 10px;
+transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+color: #3A3B3C;
+}
+.nav-links .mobile-item{
+display: none;
+}
+.nav-links .drop-menu{
+position: absolute;
+background: #ffffff;
+width: 180px;
+line-height: 45px;
+top: 85px;
+right: auto;
+opacity: 0;
+visibility: hidden;
+box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu {
+transition: all 0.3s ease;
+top: 70px;
+opacity: 1;
+visibility: visible;
+}
+.drop-menu li a{
+width: 100%;
+display: block;
+padding: 0 0 0 15px;
+margin-left: -20px;
+font-weight: 400;
+border-bottom: 1px solid #c7c7c7;
+color: #313C2E;
+text-align: center;
+}
+.drop-menu li a:hover{
+    color: #f2f2f2;
+}
+
+.sub-drop-menu {
+    display: none;
+    position: absolute;
+    left: 100%; /* Posisikan di sebelah kanan menu utama */
+    top: 0; /* Menjaga agar sejajar dengan item menu utama */
+    background-color: #ffffff;
+    width: 180px;
+    line-height: 25px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.sub-drop-menu li a {
+    padding: 10px;
+    color: #313C2E;
+    text-align: center;
+    display: block;
+}
+
+.sub-drop-menu li a:hover {
+    color: #f2f2f2;
+}
+
+/* Menampilkan submenu saat hover */
+.drop-menu li:hover .sub-drop-menu {
+    display: block;
+}
+
+.wrapper .btn{
+color: #fff;
+font-size: 20px;
+cursor: pointer;
+display: none;
+}
+.wrapper .btn.close-btn{
+position: absolute;
+right: 30px;
+top: 10px;
+}
+
+.arrow {
+    border: solid;
+    border-width: 0 3px 3px 0;
+    border-radius: 1px;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.right {
+    color: #313C2E;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+nav input{
+display: none;
+}
+
+.ED-judul {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ED-judul h1 {
+    font-family: 'dongle', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.ED-judul p {
+    color: #676767;
+}
+
+.achievements-cards {
+    text-align: center;
+    background-image: url(images/School\ achievements\ bg.png);
+    background-size: contain; /* Sesuaikan ukuran background */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1040px;
+    height: 350px;
+    box-sizing: border-box;
+}
+
+.achievements-cards img {
+    width: 120px;
+    height: auto;
+    margin-top: 90px;
+}
+
+.achievements-cards h1 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.achievements-cards hr {
+    width: 25%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    opacity: 2;
+}
+
+.achievements2-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    margin-top: -25px;
+    width: 100%;
+    height: 700px;
+    box-sizing: border-box;
+}
+
+.tc-ac-card {
+    background-image: url(images/tcac\ bg.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    width: 500px;
+    height: 700px;
+}
+
+.tc-ac-card img{
+    width: 25%;
+    margin-top: 80px;
+    margin-bottom: -10px;
+}
+
+.tc-ac-card p {
+    color: #ffffff;
+    font-weight : 500;
+    font-size: 1.5em;
+}
+
+.st-ac-card {
+    background-image: url('images/stac\ bg.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    width: 500px;
+    height: 700px;
+
+} 
+
+.st-ac-card img {
+    width: 25%;
+    margin-top: 80px;
+    margin-bottom: -10px;
+}
+
+.st-ac-card P {
+    color: #ffffff;
+    font-weight : 500;
+    font-size: 1.5em;
+}
+
+.garis-hijau {
+    width: 15%;
+    border: 2px solid #94AD8E;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 5;
+}
+footer {
+    position: relative;
+    background-image: url(images/Layer\ .png);
+    background-size: cover,contain; /* Sesuaikan ukuran background */
+    background-repeat: no-repeat,no-repeat;
+    background-position: center,bottom right;
+    margin-top: -200px;
+    padding: 20px;
+    height: 900px;
+    width: 100%;
+    text-align: center;
+    color: black; 
+}
+
+.sosial-media {
+    position: absolute;
+    left: 8%;
+    top:65%
+}
+
+.sosial-media img {
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .wrapper .btn{
+        display: block;
+      }
+      .wrapper .nav-links{
+        position: fixed;
+        height: 100vh;
+        width: 80%;
+        top: 0;
+        right: -100%;
+        background: #454c44;
+        display: block;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+        transition: all 0.3s ease;
+      }
+      /* custom scroll bar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #242526;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3A3B3C;
+      }
+      #menu-btn:checked ~ .nav-links{
+        right: 0%;
+      }
+      #menu-btn:checked ~ .btn.menu-btn{
+        display: none;
+      }
+      #close-btn:checked ~ .btn.menu-btn{
+        display: block;
+      }
+      .nav-links li{
+        margin: 15px 10px;
+      }
+      .nav-links li a{
+        padding: 0 20px;
+        display: block;
+        font-size: 20px;
+        color: #f2f2f2;
+      }
+      .nav-links li a i{
+        color: #454c44;
+      }
+      .nav-links li a:hover{
+        color: #313C2E;
+      }
+      .nav-links .drop-menu{
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+        background-color: #454c44;
+      }
+      
+      #showDropEducation:checked ~ .drop-menu, 
+      #showDropGallery:checked ~ .drop-menu {
+        max-height: 100%;
+      }
+      .nav-links .desktop-item{
+        display: none;
+      }
+      .nav-links .mobile-item{
+        display: block;
+        color: #f2f2f2 ;
+        font-size: 20px;
+        font-weight: 400;
+        padding-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .nav-links .mobile-item:hover{
+        color: #3A3B3C;
+      }
+      .drop-menu li{
+        margin: 0;
+      }
+      .drop-menu li a{
+        text-align: left;
+        margin-left: 20px;
+      }
+
+      .achievements-cards {
+        width: 800px;
+      }
+      .achievements-cards img {
+        margin-top: 80px;
+      }
+      .achievements-cards hr {
+        margin-top: 20px;
+      }
+      .achievements2-cards {
+        gap: 40px;
+      }
+      .tc-ac-card {
+        width: 380px;
+        height: 500px;
+      }
+      .tc-ac-card img {
+        margin-top: 40px;
+      }
+      .tc-ac-card p {
+        font-size: 1.3em;
+      }
+      .st-ac-card {
+        width: 380px;
+        height: 500px;
+      }
+      .st-ac-card img {
+        margin-top: 40px;
+      }
+      .st-ac-card p {
+        font-size: 1.3em;
+      }
+
+      footer {
+        height: 600px;
+      }
+}
+@media screen and (max-width: 800px) {
+    header {
+        height: 500px;
+    }
+    header p {
+        position: absolute;
+        top: 420px;
+        right: 50px;
+    }
+
+    .achievements-cards {
+        width: 500px;
+        margin-top: -50px;
+        border-radius: 50px;
+    }
+    .achievements-cards img {
+        width: 100px;
+        margin-top: 80px;
+    }
+    .achievements-cards h1 {
+        font-size: 1.5em;
+    }
+    .achievements-cards hr {
+        margin-top: 20px;
+    }
+    .achievements2-cards {
+        height: 1300px;
+    }
+    .tc-ac-card {
+        margin-top: -120px;
+        width: 500px;
+        height: 700px;
+    }
+    .tc-ac-card img {
+        margin-top: 80px;
+    }
+    .tc-ac-card p {
+        font-size: 1.5em;
+    }
+    .st-ac-card {
+        margin-top: -290px;
+        width: 500px;
+        height: 700px;
+    }
+    .st-ac-card img {
+        margin-top: 80px;
+    }
+    .st-ac-card p {
+        font-size: 1.5em;
+    }
+
+    footer {
+        height: 500px;
+    }
+}
+@media screen and (max-width: 500px) {
+    header {
+        height: 300px;
+    }
+    header p {
+        position: absolute;
+        top: 250px;
+        right: 40px;
+        font-size: 1.5em;
+    }
+    .wrapper .logo img {
+        height: 40px;
+    }
+
+    .achievements-cards {
+        width: 375px;
+        margin-top: -50px;
+        border-radius: 50px;
+    }
+    .achievements-cards img {
+        width: 80px;
+        margin-top: 100px;
+    }
+    .achievements-cards h1 {
+        font-size: 1.3em;
+    }
+    .achievements-cards hr {
+        margin-top: 10px;
+    }
+    .achievements2-cards {
+        height: 1000px;
+    }
+    .tc-ac-card {
+        margin-top: -120px;
+        width: 375px;
+        height: 500px;
+    }
+    .tc-ac-card img {
+        margin-top: 40px;
+    }
+    .tc-ac-card p {
+        font-size: 1.5em;    
+    }
+    .st-ac-card {
+        margin-top: -290px;
+        width: 375px;
+        height: 500px;
+    }
+    .st-ac-card img {
+        margin-top: 40px;
+    }
+    .st-ac-card p {
+        font-size: 1.5em;
+    }
+
+
+    footer {
+        height: 300px;
+    }
+}

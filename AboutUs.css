@@ -1,0 +1,921 @@
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    align-items: center;
+    gap: 1em;
+}
+
+/*header {
+    position: relative;
+    background-image: url(images/Sekolah\ Header.png);
+    background-size: cover,contain; 
+    background-repeat: no-repeat,no-repeat;
+    background-position: top;
+    text-align: center;
+    color: white; 
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    height: 700px;
+    width: 100%;
+    margin-top: 0;
+    padding: 11px 20px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.5em;
+}
+
+header p {
+    position: absolute;
+    top: 85%;
+    right: 7%;
+    font-size: 2em;
+    font-family: 'Dongle', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 40px;
+    margin-right: 40px;
+    padding: 0px 60px;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    white-space: nowrap;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 75%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 70px;
+}
+
+.AU-logo {
+    width: 80%;
+    height: auto;
+    align-items: top;
+}
+
+.AU-logo img {
+    width: 75%;
+    max-width: 100%;
+    height: auto;
+} */
+header {
+    width: 100%;
+    height: 700px;
+    font-family: 'Dongle', sans-serif;
+    background-image: url(images/Sekolah\ Header.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+header p {
+    position: absolute;
+    top: 600px;
+    right: 50px;
+    font-size: 2em;
+    font-family: 'Dongle', sans-serif;
+    color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav{
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    background-size: cover,contain; 
+    background-repeat: no-repeat,no-repeat;
+    background-position: top;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  nav .wrapper{
+    max-width: 1300px;
+    padding: 0px 30px;
+    height: 90px;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapper .logo img{
+    height: 60px;
+    width: auto;
+    padding-left: 8%;
+  }
+  .wrapper .nav-links{
+    display: inline-flex;
+    padding-top: 40px;
+    padding-right: 8%;
+  }
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 9px 10px;
+    transition: all 0.3s ease;
+  }
+  .nav-links li a:hover{
+    color: #3A3B3C;
+  }
+  .nav-links .mobile-item{
+    display: none;
+  }
+  .nav-links .drop-menu{
+    position: absolute;
+    background: #ffffff;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    right: auto;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  .nav-links li:hover .drop-menu {
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    margin-left: -20px;
+    font-weight: 400;
+    border-bottom: 1px solid #c7c7c7;
+    color: #313C2E;
+    text-align: center;
+  }
+  .drop-menu li a:hover{
+      color: #f2f2f2;
+  }
+  
+  .sub-drop-menu {
+      display: none;
+      position: absolute;
+      left: 100%; /* Posisikan di sebelah kanan menu utama */
+      top: 0; /* Menjaga agar sejajar dengan item menu utama */
+      background-color: #ffffff;
+      width: 180px;
+      line-height: 25px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  
+  .sub-drop-menu li a {
+      padding: 10px;
+      color: #313C2E;
+      text-align: center;
+      display: block;
+  }
+  
+  .sub-drop-menu li a:hover {
+      color: #f2f2f2;
+  }
+  
+  /* Menampilkan submenu saat hover */
+  .drop-menu li:hover .sub-drop-menu {
+      display: block;
+  }
+  
+  .wrapper .btn{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapper .btn.close-btn{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+  
+  .arrow {
+      border: solid;
+      border-width: 0 3px 3px 0;
+      border-radius: 1px;
+      display: inline-block;
+      padding: 3px;
+      margin-left: 5px;
+      margin-bottom: 2px;
+    }
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    .right {
+      color: #313C2E;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+  
+  nav input{
+    display: none;
+  }
+.AU-founder {
+    display: flex;
+    flex-direction: row;
+    background-image: url('images/AU-founder-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.AU-founder img {
+    margin-top: 20%;
+    margin-left: 20%;
+    width: 90%;
+}
+
+.garis-full {
+    margin: 0;
+}
+
+.garis-hijau {
+    width: 30%;
+    opacity: 5;
+    border: 3px solid #94ad8e;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AU-founder-text {
+    margin-top: 200px;
+}
+
+.AU-founder-text p {
+    color: #676767;
+    line-height: 10px;
+}
+.AU-founder-text hr {
+  width: 100%;
+}
+.meet {
+    margin-left: -40px;
+    font-size: 1.9em;
+}
+
+.meet-hijau {
+    font-family: 'dongle', sans-serif;
+    color: #6FA063;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.AU-teacher {
+    margin-top: 10%;
+}
+
+.AU-teacher h1 {
+   text-align: center;
+   font-size: 2em;
+}
+
+.AU-teacher span {
+    font-family: 'dongle', sans-serif;
+    color: #6FA063;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.garis-judul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    margin-bottom: 80px;
+    width: 35%;
+}
+.AU-teacher-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: hidden;
+}
+
+.tc-card {
+  display: flex; /* Menggunakan Flexbox */
+  flex-direction: column; /* Mengatur elemen dalam kolom */
+  justify-content: space-between; /* Mengatur jarak antara elemen */
+  align-items: center; /* Menyelaraskan elemen secara horizontal */
+  text-align: center;
+  width: 270px;
+  height: 600px;
+  font-size: 1.2em;
+  box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+}
+
+.tc-card img {
+  width: 220px;
+  height: auto;
+}
+
+.tc-card h2 {
+  margin-top: 10%;
+  font-size: 1.2em;
+  color: #676767;
+  font-weight: 620;
+}
+
+.tc-card p {
+  font-weight: 500;
+  margin-top: auto; /* Mendorong elemen <p> ke bawah */
+}
+
+.tc-card hr {
+  width: 90%;
+  margin: 10px 0 0; /* Memberikan margin atas kecil agar tetap dekat dengan <p> */
+  margin-top: auto; /* Memastikan hr berada di bawah */
+}
+
+.garis-full2 {
+    margin-top: 0;
+    margin-bottom: 600px;
+}
+
+.AU-vision-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    background-image: url('images/os-structure\ bg2.png');
+    background-size:cover; /* Sesuaikan ukuran background */
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 20px;
+    margin-bottom: -100px;
+    height: 1300px;
+    width: 100%;
+    gap: 10px;
+}
+
+.vm-card {
+    width: 500px;
+    height: 900px;
+    background-image: url(images/Vision\ Mission\ BG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -580px;
+    padding-top: 50px; 
+}
+
+.v-card {
+    width: 420px;
+    margin-top: 65px;
+    margin-left: 40px;
+    font-size: 0.9em;
+}
+
+.v-card h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.m-card {
+    width: 400px;
+    margin-top: 60px;
+    margin-left: 40px;
+    font-size: 0.8em;
+}
+
+.m-card h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.m-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #dfdfdf;
+}
+
+.m-card li {
+    margin-bottom: 5px;
+}
+.history-card {
+    width: 500px;
+    height: 950px;
+    margin-top: -540px;
+    color: #ffffff;
+    background-image: url(images/history-card\ bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.history-card h1 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-left: -10px;
+    font-size: 2.5em;
+    font-family: 'dongle', sans-serif;
+    font-weight: bold;
+}
+
+.history-card p {
+    width: 360px;
+    margin-left: 65px;
+    text-align: justify;
+    font-size: 0.8em;
+}
+
+.history-card hr {
+    width: 50%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 5;
+    border:1.2px solid #9D9B9B;
+}
+
+.AU-structure {
+    margin-top: -200px;
+    text-align: center;
+}
+
+.AU-structure h1 {
+    font-family: 'dongle',sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.AU-structure #ls {
+  width: 200px;
+}
+
+.AU-structure #os {
+    margin-top: 30px;
+    margin-left: -150px;
+    width: 95%;
+}
+
+footer {
+  position: relative;
+  background-image: url(images/Layer\ .png);
+  background-size: cover,contain; /* Sesuaikan ukuran background */
+  background-repeat: no-repeat,no-repeat;
+  background-position: center,bottom right;
+  margin-top: -200px;
+  padding: 20px;
+  height: 900px;
+  width: 100%;
+  text-align: center;
+  color: black; /* Sesuaikan warna teks agar terlihat di atas latar belakang */
+} /* Sesuaikan warna teks agar terlihat di atas latar belakang */
+
+
+/*.alamat-info {
+    position: absolute;
+    right: 6%;
+    top: 61.5%;
+    transform: translateY(-50%);
+    width: 43%;
+    text-align: left;
+}
+
+.alamat-info h4 {
+    font-family: 'dongle',sans-serif;
+    font-size: 1.8em;
+    color: #313C2E;
+}
+
+.alamat-info p {
+    font-family: 'poppins',sans-serif;
+    font-size: 0.8em;
+    margin-top: -15px;
+    color: #313C2E;
+}
+
+.nomer-telp {
+    margin-top: 25px;
+    color: #313C2E;
+}*/
+
+.sosial-media {
+    position: absolute;
+    left: 8%;
+    top:65%
+}
+
+.sosial-media img {
+    margin-right: 20px;
+}
+@media screen and (max-width: 1049px) {
+  .garis-full2 {
+    margin-bottom: 1000px;
+  }
+  .AU-vision-cards {
+    height: 1300px;
+    width: 100%;
+  }
+
+  .vm-card {
+    width: 500px;
+    height: 900px;
+    margin-top: -1080px;
+  }
+
+  .history-card {
+    width: 500px;
+    height: 950px;
+    margin-top: -700px;
+  }
+
+  .AU-structure {
+    margin-top: -200px;
+  }
+
+  .AU-structure h1 {
+    font-size: 3em;
+  }
+
+  .AU-structure #os {
+    margin-top: 30px;
+    margin-left: -150px;
+    width: 95%;
+  }
+
+  footer {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1040px) {
+    .wrapper .btn{
+      display: block;
+    }
+    .wrapper .nav-links{
+      position: fixed;
+      height: 100vh;
+      width: 80%;
+      top: 0;
+      right: -100%;
+      background: #454c44;
+      display: block;
+      padding: 50px 10px;
+      line-height: 50px;
+      overflow-y: auto;
+      box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
+    }
+    /* custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #242526;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3A3B3C;
+    }
+    #menu-btn:checked ~ .nav-links{
+      right: 0%;
+    }
+    #menu-btn:checked ~ .btn.menu-btn{
+      display: none;
+    }
+    #close-btn:checked ~ .btn.menu-btn{
+      display: block;
+    }
+    .nav-links li{
+      margin: 15px 10px;
+    }
+    .nav-links li a{
+      padding: 0 20px;
+      display: block;
+      font-size: 20px;
+      color: #f2f2f2;
+    }
+    .nav-links li a i{
+      color: #454c44;
+    }
+    .nav-links li a:hover{
+      color: #313C2E;
+    }
+    .nav-links .drop-menu{
+      position: static;
+      opacity: 1;
+      top: 65px;
+      visibility: visible;
+      padding-left: 20px;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      background-color: #454c44;
+    }
+    
+    #showDropEducation:checked ~ .drop-menu, 
+    #showDropGallery:checked ~ .drop-menu {
+      max-height: 100%;
+    }
+    .nav-links .desktop-item{
+      display: none;
+    }
+    .nav-links .mobile-item{
+      display: block;
+      color: #f2f2f2 ;
+      font-size: 20px;
+      font-weight: 400;
+      padding-left: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links .mobile-item:hover{
+      color: #3A3B3C;
+    }
+    .drop-menu li{
+      margin: 0;
+    }
+    .drop-menu li a{
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .AU-founder img {
+        width: 70%;
+    }
+    .AU-founder-text {
+        margin-left: -80px;
+    }
+
+    .AU-structure {
+      margin-top: -200px;
+      text-align: center;
+    }
+   .AU-structure h1 {
+      font-size: 3em;
+    }
+    .AU-structure #os {
+      margin-top: 30px;
+      margin-left: -120px;
+      width: 95%;
+    }
+
+}
+@media screen and (max-width: 850px) {
+  .AU-teacher h1 {
+    font-size: 1.5em;
+  }
+  .garis-judul {
+    margin-top: -10px;
+    margin-bottom: 60px;
+
+  }
+  .tc-card {
+    width: 200px;
+    height: 370px;
+    font-size: 1.2em;
+  }
+  .tc-card img {
+    width: 150px;
+    height: auto;
+  }
+  .tc-card h2 {
+    font-size: 0.8em;
+  }
+  .tc-card p {
+    font-size: 0.7em;
+  }
+
+}
+@media screen and (max-width: 800px) {
+  header {
+    height: 500px;
+  }
+  header p {
+    position: absolute;
+    top: 420px;
+    right: 50px;
+  }
+
+  .AU-founder img {
+    margin-top: 10%;   
+    margin-left: 10%;  
+    width: 50%;
+  }
+  .AU-founder-text {
+    margin-top: 100px;
+  }
+  .AU-founder-text p {
+    margin-left: -150px;
+  }
+  .AU-founder-text hr {
+    width: 210%;
+    margin-left: -150px;
+  }
+  .meet {
+    margin-left: -180px;
+    font-size: 1.5em;
+  }
+
+  .AU-structure {
+    margin-top: -200px;
+    text-align: center;
+  }
+ .AU-structure h1 {
+    font-size: 2.5em;
+  }
+  .AU-structure #ls {
+    width: 150px;
+  }
+  .AU-structure #os {
+    margin-left: -80px;
+  }
+
+  footer {
+     height: 500px;
+ }
+}
+@media screen and (max-width: 640px) {
+  .AU-teacher-cards {
+    gap: 10px;
+  }
+  .tc-card {
+    width: 160px;
+    height: 340px;
+    font-size: 1.2em;
+  }
+  .tc-card img {
+    width: 120px;
+    height: auto;
+  }
+  .tc-card h2 {
+    font-size: 0.8em;
+  }
+  .tc-card p {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 620px) {
+  .AU-founder img {
+    margin-top: 10%;   
+    margin-left: 5%;  
+    width: 40%;
+  }
+  .AU-founder-text {
+    margin-top: 80px;
+  }
+  .AU-founder-text p {
+    margin-left: -250px;
+    font-size: 0.8em;
+  }
+  .AU-founder-text hr {
+    width: 200px;
+    margin-left: -250px;
+  }
+  .meet {
+    margin-left: -270px;
+    font-size: 1em;
+  }
+  
+  .garis-full2 {
+    margin-bottom: 600px;
+  }
+  .vm-card {
+    width: 320px;
+    height: 700px;
+    margin-top: -700px;
+  }
+  .v-card {
+    width: 300px;
+    margin-top: 80px;
+    margin-left: 15px;
+    font-size: 0.6em;
+  }
+  .m-card {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 0.55em;
+  }
+  .history-card {
+    width: 320px;
+    height: 700px;
+    margin-top: -610px;
+  }
+
+  .history-card h1 {
+    margin-top: 80px;
+    margin-left: -15px;
+    font-size: 1.6em;
+  }
+
+  .history-card p {
+    width: 280px;
+    margin-left: 20px;
+    font-size: 0.6em;
+  }
+
+  .history-card hr {
+    width: 40%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: 300px;
+  }
+  header p {
+    position: absolute;
+    top: 250px;
+    right: 40px;
+    font-size: 1.5em;
+  }
+  .wrapper .logo img {
+    height: 40px;
+  }
+
+  .AU-founder img {
+    width: 40%;  
+  }
+  .AU-founder-text {
+    margin-top: 80px;
+  }
+  .AU-founder-text p {
+    margin-left: -210px;
+    font-size: 0.7em;
+    line-height: 0;
+  }
+  .AU-founder-text hr {
+    width: 150px;
+    margin-left: -200px;
+  }
+  .meet {
+    margin-left: -230px;
+    font-size: 1em;
+  }
+
+  footer {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .AU-founder img {
+    margin-top: 5%;
+    width: 30%;  
+  }
+  .AU-founder-text {
+    margin-top: 30px;
+  }
+  .AU-founder-text p {
+    margin-left: -210px;
+    font-size: 0.6em;
+    line-height: 0;
+  }
+  .AU-founder-text hr {
+    width: 150px;
+    margin-left: -210px;
+  }
+  .meet {
+    margin-left: -230px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+  }
+
+}
